@@ -24,7 +24,7 @@ int main()
 		while (true3 == true1 || true3 == true2){
 			true3 = rand()%10;
 		}//It is used to generate random numbers.
-	//	cout<<true1<<true2<<true3<<endl;
+//		cout<<true1<<true2<<true3<<endl;
 	for (chance = 1; chance <=7; ++chance){
 		cout<<"Please input the number you guess:"<<endl;
 		cin>> guess1 >> guess2 >> guess3;
@@ -32,19 +32,20 @@ int main()
 		B_times = (guess1 == true2) + (guess1 == true3) + (guess2 == true1) + (guess2 == true3) + (guess3 == true1) + (guess3 == true2);
 		if (A_times == 3){
 			cout<<"congratulations! You win the game!"<<endl;
+			++game_times;
 			++win_times;
 			break; 
 		}//You win the game.
 		else cout<< A_times << 'A' << B_times << 'b' <<endl;
 		if (A_times != 3 && chance == 7){
 			cout<<"Tt's a pity, you lost the game, the answer is "<< true1<<" "<< true2 <<" "<< true3 <<endl;
+			++game_times;
 			++lost_times;
 		}//You lost the game.
-		++game_times
 	}
 	cout<<"Do you want to play the game?(Yes or No)"<<endl;
 	cin>>answer;
    }
-cout<<"You played"<<""<<game_times<<""<<times, won"<<""<<win_times<<""<<times, lost"<<""<<lost_times<<""<<times."<<endl;
+cout<<"You played"<<game_times<<"times, won"<<win_times<<"times, lost"<<lost_times<<"times."<<endl;
 return 0;
 }//The final result.

@@ -24,7 +24,7 @@ int main()
 		while (true3 == true1 || true3 == true2){
 			true3 = rand()%10;
 		}//It is used to generate random numbers.
-		cout<<true1<<true2<<true3<<endl;
+	//	cout<<true1<<true2<<true3<<endl;
 	for (chance = 1; chance <=7; ++chance){
 		cout<<"Please input the number you guess:"<<endl;
 		cin>> guess1 >> guess2 >> guess3;
